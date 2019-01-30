@@ -46,7 +46,6 @@ packages_lib="\
     libgts-dev                  \
     liblapack-dev               \
     libmpfr-dev                 \
-    libmysql++-dev              \
     libplot-dev                 \
     libsqlite3-dev              \
     libsuperlu-dev              \
@@ -87,6 +86,11 @@ sudo apt-get install -y $packages_nonfree
 # free disk space by cleaning install files
 apt-get clean
 
+
+# install libmysql++-dev from debian stretch
+wget http://ftp.ch.debian.org/debian/pool/main/m/mysql++/libmysql++-dev_3.2.2+pristine-2_amd64.deb
+dpkg -i libmysql++-dev_3.2.2+pristine-2_amd64.deb
+# rm libmysql++-dev_3.2.2+pristine-2_amd64.deb
 
 # mayavi installation. Some 'mayavi' packages seems
 # to require VTK 6 so we use pip. If you're a Debian user
